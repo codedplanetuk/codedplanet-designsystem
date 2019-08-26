@@ -4,7 +4,7 @@
   "description": "Coded Planet design system",
   "repository": {
     "type": "git",
-    "url": "https://github.com/codedplanetuk/codedplanet-designsystem.git"
+    "url": "git@github.com:codedplanetuk/codedplanet-designsystem.git"
   },
   "license": "MIT",
   "author": {
@@ -27,6 +27,7 @@
     "styled-components": "^4.3.2"
   },
   "scripts": {
+    "release": "npm run build && ./scripts/release.sh",
     "build": "babel src -d dist",
     "build-sb": "build-storybook",
     "build-docs": "build-storybook --docs",
@@ -53,6 +54,7 @@
     ]
   },
   "devDependencies": {
+    "auto": "^4.14.0",
     "@storybook/addon-actions": "^5.2.0-beta.32",
     "@storybook/addon-docs": "^5.2.0-beta.32",
     "@storybook/addon-links": "^5.2.0-beta.32",
@@ -75,5 +77,11 @@
     "babel-loader": "^8.0.0",
     "babel-plugin-require-context-hook": "^1.0.0",
     "babel-plugin-styled-components": "^1.9.4"
+  },
+  "auto": {
+    "plugins": [
+      "npm",
+      "released"
+    ]
   }
 }
