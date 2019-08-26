@@ -19,7 +19,7 @@ const Container = styled.div`
 /**
  * The `logo` component appears top left.
  */
-export default function Logo(props) {
+export function Logo(props) {
   const base = <Wrapper>Coded Planet</Wrapper>;
   return (
     <Container

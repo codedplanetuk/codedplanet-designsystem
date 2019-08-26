@@ -10,7 +10,7 @@ const Wrapper = styled.div`
 /**
  * The `icon` component is used for ratings etc
  */
-export default function DFIcon(props) {
+export function DFIcon(props) {
   return (
     <Wrapper size={props.size}>
       <Icon {...props} />

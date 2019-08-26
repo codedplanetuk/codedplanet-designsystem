@@ -6,6 +6,7 @@ import * as global from './shared/global';
 export { styles, global };
 
 export * from './atoms/button';
+export * from './atoms/icon';
 
 // export * from './Avatar';
 // export * from './AvatarList';

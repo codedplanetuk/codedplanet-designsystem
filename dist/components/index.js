@@ -31,3 +31,16 @@ Object.keys(_button).forEach(function (key) {
     }
   });
 });
+
+var _icon = require("./atoms/icon");
+
+Object.keys(_icon).forEach(function (key) {
+  if (key === "default" || key === "__esModule") return;
+  if (Object.prototype.hasOwnProperty.call(_exportNames, key)) return;
+  Object.defineProperty(exports, key, {
+    enumerable: true,
+    get: function get() {
+      return _icon[key];
+    }
+  });
+});

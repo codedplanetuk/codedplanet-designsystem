@@ -1,5 +1,5 @@
 import React from 'react';
-import Icon from './icon';
+import { DFIcon } from './icon';
 import { action } from '@storybook/addon-actions';
 import { color } from '../shared/styles';
 
@@ -9,7 +9,7 @@ export default {
 };
 
 export const sad = () => (
-  <Icon
+  <DFIcon
     type="frown"
     theme="twoTone"
     size="2.5em"
@@ -18,7 +18,7 @@ export const sad = () => (
   )
 
 export const neutral = () => (
-  <Icon
+  <DFIcon
     type="meh"
     theme="twoTone"
     size="2.5em"
@@ -27,7 +27,7 @@ export const neutral = () => (
   )
 
 export const happy = () => (
-  <Icon
+  <DFIcon
     type="smile"
     theme="twoTone"
     size="2.5em"
