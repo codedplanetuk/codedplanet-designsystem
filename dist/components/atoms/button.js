@@ -7,9 +7,9 @@ Object.defineProperty(exports, "__esModule", {
 });
 exports.DFButton = DFButton;
 
-var _react = _interopRequireDefault(require("react"));
+var _button = _interopRequireDefault(require("antd/lib/button"));
 
-var _antd = require("antd");
+var _react = _interopRequireDefault(require("react"));
 
 var _styledComponents = _interopRequireDefault(require("styled-components"));
 
@@ -21,7 +21,7 @@ var _propTypes = _interopRequireDefault(require("prop-types"));
 function DFButton(props) {
   var type = props.type,
       children = props.children;
-  return _react.default.createElement(_antd.Button, {
+  return _react.default.createElement(_button.default, {
     type: type
   }, children);
 }

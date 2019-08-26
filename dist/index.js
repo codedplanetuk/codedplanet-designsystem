@@ -4,14 +4,14 @@ Object.defineProperty(exports, "__esModule", {
   value: true
 });
 
-var _Components = require("./Components");
+var _components = require("./components");
 
-Object.keys(_Components).forEach(function (key) {
+Object.keys(_components).forEach(function (key) {
   if (key === "default" || key === "__esModule") return;
   Object.defineProperty(exports, key, {
     enumerable: true,
     get: function get() {
-      return _Components[key];
+      return _components[key];
     }
   });
 });

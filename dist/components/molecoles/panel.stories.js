@@ -7,23 +7,25 @@ Object.defineProperty(exports, "__esModule", {
 });
 exports.panel = exports.default = void 0;
 
+var _col = _interopRequireDefault(require("antd/lib/col"));
+
+var _row = _interopRequireDefault(require("antd/lib/row"));
+
 var _react = _interopRequireDefault(require("react"));
 
 var _panel = _interopRequireDefault(require("./panel"));
 
 var _icon = _interopRequireDefault(require("../atoms/icon"));
 
-var _antd = require("antd");
-
 var _addonActions = require("@storybook/addon-actions");
 
 var _styles = require("../shared/styles");
 
-var _default = {
+var _default3 = {
   title: 'Design System|Molecoles/Panel',
   component: _panel.default
 };
-exports.default = _default;
+exports.default = _default3;
 
 var sad = function sad() {
   return _react.default.createElement(_icon.default, {
@@ -58,17 +60,17 @@ var happy = function happy() {
 var panel = function panel() {
   return _react.default.createElement(_panel.default, {
     tagTitle: "rate me"
-  }, _react.default.createElement(_antd.Row, null, _react.default.createElement(_antd.Col, {
+  }, _react.default.createElement(_row.default, null, _react.default.createElement(_col.default, {
     style: {
       'textAlign': 'center'
     },
     sm: 8
-  }, sad()), _react.default.createElement(_antd.Col, {
+  }, sad()), _react.default.createElement(_col.default, {
     style: {
       'textAlign': 'center'
     },
     sm: 8
-  }, neutral()), _react.default.createElement(_antd.Col, {
+  }, neutral()), _react.default.createElement(_col.default, {
     style: {
       'textAlign': 'center'
     },

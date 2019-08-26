@@ -9,13 +9,15 @@ exports.default = Footer;
 
 var _taggedTemplateLiteral2 = _interopRequireDefault(require("@babel/runtime/helpers/taggedTemplateLiteral"));
 
+var _col = _interopRequireDefault(require("antd/lib/col"));
+
+var _row = _interopRequireDefault(require("antd/lib/row"));
+
 var _react = _interopRequireDefault(require("react"));
 
 var _styledComponents = _interopRequireDefault(require("styled-components"));
 
 var _propTypes = _interopRequireDefault(require("prop-types"));
-
-var _antd = require("antd");
 
 function _templateObject() {
   var data = (0, _taggedTemplateLiteral2.default)(["\n  border: solid 1px #F3F3F3;\n"]);

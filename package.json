@@ -1,6 +1,6 @@
 {
   "name": "codedplanet-designsystem",
-  "version": "0.1.1",
+  "version": "0.1.2",
   "description": "Coded Planet design system",
   "repository": {
     "type": "git",
@@ -54,18 +54,6 @@
     ]
   },
   "devDependencies": {
-    "auto": "^4.14.0",
-    "@storybook/addon-actions": "^5.2.0-beta.32",
-    "@storybook/addon-docs": "^5.2.0-beta.32",
-    "@storybook/addon-links": "^5.2.0-beta.32",
-    "@storybook/addon-storysource": "^5.2.0-beta.32",
-    "@storybook/addons": "^5.2.0-beta.32",
-    "@storybook/react": "^5.2.0-beta.32",
-    "css-loader": "^3.2.0",
-    "less": "^3.10.3",
-    "less-loader": "^5.0.0",
-    "prop-types": "^15.7.2",
-    "style-loader": "^1.0.0",
     "@babel/cli": "^7.2.3",
     "@babel/core": "^7.2.2",
     "@babel/node": "^7.2.2",
@@ -73,10 +61,23 @@
     "@babel/plugin-transform-runtime": "^7.2.0",
     "@babel/preset-env": "^7.3.1",
     "@babel/preset-react": "^7.0.0",
+    "@storybook/addon-actions": "^5.2.0-beta.32",
+    "@storybook/addon-docs": "^5.2.0-beta.32",
+    "@storybook/addon-links": "^5.2.0-beta.32",
+    "@storybook/addon-storysource": "^5.2.0-beta.32",
+    "@storybook/addons": "^5.2.0-beta.32",
+    "@storybook/react": "^5.2.0-beta.32",
+    "auto": "^4.14.0",
     "babel-eslint": "^10.0.1",
     "babel-loader": "^8.0.0",
+    "babel-plugin-import-less": "^0.1.1",
     "babel-plugin-require-context-hook": "^1.0.0",
-    "babel-plugin-styled-components": "^1.9.4"
+    "babel-plugin-styled-components": "^1.9.4",
+    "css-loader": "^3.2.0",
+    "less": "^3.10.3",
+    "less-loader": "^5.0.0",
+    "prop-types": "^15.7.2",
+    "style-loader": "^1.0.0"
   },
   "auto": {
     "plugins": [

@@ -9,9 +9,9 @@ exports.default = DFIcon;
 
 var _taggedTemplateLiteral2 = _interopRequireDefault(require("@babel/runtime/helpers/taggedTemplateLiteral"));
 
-var _react = _interopRequireDefault(require("react"));
+var _icon = _interopRequireDefault(require("antd/lib/icon"));
 
-var _antd = require("antd");
+var _react = _interopRequireDefault(require("react"));
 
 var _styledComponents = _interopRequireDefault(require("styled-components"));
 
@@ -38,7 +38,7 @@ var Wrapper = _styledComponents.default.div(_templateObject(), function (props) 
 function DFIcon(props) {
   return _react.default.createElement(Wrapper, {
     size: props.size
-  }, _react.default.createElement(_antd.Icon, props));
+  }, _react.default.createElement(_icon.default, props));
 }
 
 DFIcon.propTypes = {
