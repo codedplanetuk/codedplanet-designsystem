@@ -7,9 +7,13 @@
 
 # testing
 /coverage
+test.js
 
 # production
 /build
+/storybook-static
+/node_modules
+/dist-example
 
 # misc
 .DS_Store

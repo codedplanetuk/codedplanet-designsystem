@@ -1,7 +1,7 @@
 import React from 'react';
 import styled from 'styled-components';
 
-import { color, typography } from '../Shared/styles';
+import { color, typography } from '../shared/styles';
 
 const Heading = styled.div`
   font-size: ${typography.size.m1}px;

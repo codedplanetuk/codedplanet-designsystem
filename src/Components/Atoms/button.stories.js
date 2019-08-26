@@ -1,7 +1,7 @@
 import React from 'react';
-import Button from './button';
+import { Button } from './button';
 import { action } from '@storybook/addon-actions';
-import { color } from '../Shared/styles';
+import { color } from '../shared/styles';
 
 export default {
   title: 'Design System|Atoms/Button',

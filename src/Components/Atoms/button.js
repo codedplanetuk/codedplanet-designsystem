@@ -6,7 +6,7 @@ import PropTypes from "prop-types";
 /**
  * The `button` component
  */
-export default function DFButton(props) {
+export function DFButton(props) {
   const { type, children } = props;
   return (
     <Button type={type} >{children}</Button>

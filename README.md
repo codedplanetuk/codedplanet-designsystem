@@ -1,3 +1,3 @@
 ## Coded planet design system
 
-Design system built with storybook and antd.
+Release 0.1.0

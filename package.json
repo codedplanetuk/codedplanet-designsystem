@@ -1,7 +1,12 @@
 {
   "name": "codedplanet-designsystem",
   "version": "0.1.0",
-  "private": true,
+  "description": "Coded Planet design system",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/codedplanetuk/codedplanet-designsystem.git"
+  },
+  "main": "dist/index.js",
   "dependencies": {
     "antd": "^3.21.4",
     "aws-sdk": "^2.507.0",
@@ -17,8 +22,11 @@
     "styled-components": "^4.3.2"
   },
   "scripts": {
+    "build": "babel src -d dist",
+    "build-sb": "build-storybook",
+    "build-docs": "build-storybook --docs",
     "start": "react-app-rewired start",
-    "build": "react-app-rewired build",
+    "build-cra": "react-app-rewired build",
     "test": "react-app-rewired test",
     "eject": "react-scripts eject",
     "storybook": "start-storybook -p 6006",
@@ -40,18 +48,27 @@
     ]
   },
   "devDependencies": {
-    "@babel/core": "^7.5.5",
     "@storybook/addon-actions": "^5.2.0-beta.32",
     "@storybook/addon-docs": "^5.2.0-beta.32",
     "@storybook/addon-links": "^5.2.0-beta.32",
     "@storybook/addon-storysource": "^5.2.0-beta.32",
     "@storybook/addons": "^5.2.0-beta.32",
     "@storybook/react": "^5.2.0-beta.32",
-    "babel-loader": "^8.0.6",
     "css-loader": "^3.2.0",
     "less": "^3.10.3",
     "less-loader": "^5.0.0",
     "prop-types": "^15.7.2",
-    "style-loader": "^1.0.0"
+    "style-loader": "^1.0.0",
+    "@babel/cli": "^7.2.3",
+    "@babel/core": "^7.2.2",
+    "@babel/node": "^7.2.2",
+    "@babel/plugin-proposal-object-rest-spread": "^7.3.2",
+    "@babel/plugin-transform-runtime": "^7.2.0",
+    "@babel/preset-env": "^7.3.1",
+    "@babel/preset-react": "^7.0.0",
+    "babel-eslint": "^10.0.1",
+    "babel-loader": "^8.0.0",
+    "babel-plugin-require-context-hook": "^1.0.0",
+    "babel-plugin-styled-components": "^1.9.4"
   }
 }

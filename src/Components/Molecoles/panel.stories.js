@@ -1,9 +1,9 @@
 import React from 'react';
 import Panel from './panel';
-import Icon from '../Atoms/icon';
+import Icon from '../atoms/icon';
 import { Row, Col } from 'antd';
 import { action } from '@storybook/addon-actions';
-import { color } from '../Shared/styles';
+import { color } from '../shared/styles';
 
 export default {
   title: 'Design System|Molecoles/Panel',

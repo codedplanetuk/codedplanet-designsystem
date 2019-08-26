@@ -1,7 +1,7 @@
 import React from 'react';
 import styled from 'styled-components';
 
-import { typography } from '../Shared/styles';
+import { typography } from '../shared/styles';
 
 const Info = styled.div`
   margin-bottom: 3rem;

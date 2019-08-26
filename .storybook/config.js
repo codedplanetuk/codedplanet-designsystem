@@ -8,7 +8,7 @@
 // configure(loadStories, module);
 import React from 'react';
 import { configure, addDecorator } from '@storybook/react';
-import { GlobalStyle } from '../src/Components/Shared/global';
+import { GlobalStyle } from '../src/components/shared/global';
 
 addDecorator(story => (
   <>
@@ -22,10 +22,10 @@ configure(
   [
     // require.context('../src', true, /\.stories\.mdx$/),
     // require.context('../stories', true, /\.stories\.js$/),
-    require.context('../src/Components/Atoms', true, /\.stories\.js$/),
-    require.context('../src/Components/Molecoles', true, /\.stories\.js$/),
-    require.context('../src/Components/Organisms', true, /\.stories\.js$/),
-    require.context('../src/Components/General', true, /\.stories\.js$/),
+    require.context('../src/components/atoms', true, /\.stories\.js$/),
+    require.context('../src/components/molecoles', true, /\.stories\.js$/),
+    require.context('../src/components/organisms', true, /\.stories\.js$/),
+    require.context('../src/components/general', true, /\.stories\.js$/),
   ],
   module
 );
