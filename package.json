@@ -1,88 +1,61 @@
 {
   "name": "codedplanet-designsystem",
-  "version": "0.1.3",
-  "description": "Coded Planet design system",
-  "repository": {
-    "type": "git",
-    "url": "git@github.com:codedplanetuk/codedplanet-designsystem.git"
-  },
+  "version": "0.1.4",
+  "description": "Design system for Coded Planet",
+  "author": "codedplanetuk",
   "license": "MIT",
-  "author": {
-    "name": "Shaun Farrell",
-    "email": "codedplanet@gmail.com"
-  },
+  "repository": "codedplanetuk/codedplanet-designsystem",
   "main": "dist/index.js",
-  "dependencies": {
-    "antd": "^3.21.4",
-    "aws-sdk": "^2.507.0",
-    "babel-plugin-import": "^1.12.0",
-    "bootstrap": "^4.3.1",
-    "customize-cra": "^0.5.0",
-    "gsap": "^2.1.3",
-    "react": "^16.9.0",
-    "react-app-rewired": "^2.1.3",
-    "react-dom": "^16.9.0",
-    "react-router-dom": "^5.0.1",
-    "react-scripts": "3.1.0",
-    "styled-components": "^4.3.2"
+  "module": "dist/index.es.js",
+  "jsnext:main": "dist/index.es.js",
+  "engines": {
+    "node": ">=8",
+    "npm": ">=5"
   },
   "scripts": {
-    "release": "npm run build && ./scripts/release.sh",
-    "build": "babel src -d dist",
-    "build-sb": "build-storybook",
-    "build-docs": "build-storybook --docs",
-    "start": "react-app-rewired start",
-    "build-cra": "react-app-rewired build",
-    "test": "react-app-rewired test",
-    "eject": "react-scripts eject",
-    "storybook": "start-storybook -p 6006",
-    "build-storybook": "build-storybook"
+    "test": "cross-env CI=1 react-scripts test --env=jsdom",
+    "test:watch": "react-scripts test --env=jsdom",
+    "build": "rollup -c",
+    "start": "rollup -c -w",
+    "prepare": "yarn run build",
+    "predeploy": "cd example && yarn install && yarn run build",
+    "deploy": "gh-pages -d example/build"
   },
-  "eslintConfig": {
-    "extends": "react-app"
-  },
-  "browserslist": {
-    "production": [
-      ">0.2%",
-      "not dead",
-      "not op_mini all"
-    ],
-    "development": [
-      "last 1 chrome version",
-      "last 1 firefox version",
-      "last 1 safari version"
-    ]
+  "peerDependencies": {
+    "prop-types": "^15.5.4",
+    "react": "^15.0.0 || ^16.0.0",
+    "react-dom": "^15.0.0 || ^16.0.0"
   },
   "devDependencies": {
-    "@babel/cli": "^7.2.3",
-    "@babel/core": "^7.2.2",
-    "@babel/node": "^7.2.2",
-    "@babel/plugin-proposal-object-rest-spread": "^7.3.2",
-    "@babel/plugin-transform-runtime": "^7.2.0",
-    "@babel/preset-env": "^7.3.1",
-    "@babel/preset-react": "^7.0.0",
-    "@storybook/addon-actions": "^5.2.0-beta.32",
-    "@storybook/addon-docs": "^5.2.0-beta.32",
-    "@storybook/addon-links": "^5.2.0-beta.32",
-    "@storybook/addon-storysource": "^5.2.0-beta.32",
-    "@storybook/addons": "^5.2.0-beta.32",
-    "@storybook/react": "^5.2.0-beta.32",
-    "auto": "^4.14.0",
-    "babel-eslint": "^10.0.1",
-    "babel-loader": "^8.0.0",
-    "babel-plugin-import-less": "^0.1.1",
-    "babel-plugin-require-context-hook": "^1.0.0",
-    "babel-plugin-styled-components": "^1.9.4",
-    "css-loader": "^3.2.0",
-    "less": "^3.10.3",
-    "less-loader": "^5.0.0",
-    "prop-types": "^15.7.2",
-    "style-loader": "^1.0.0"
+    "@svgr/rollup": "^2.4.1",
+    "babel-core": "^6.26.3",
+    "babel-eslint": "^8.2.5",
+    "babel-plugin-external-helpers": "^6.22.0",
+    "babel-preset-env": "^1.7.0",
+    "babel-preset-react": "^6.24.1",
+    "babel-preset-stage-0": "^6.24.1",
+    "cross-env": "^5.1.4",
+    "eslint": "^5.0.1",
+    "eslint-config-standard": "^11.0.0",
+    "eslint-config-standard-react": "^6.0.0",
+    "eslint-plugin-import": "^2.13.0",
+    "eslint-plugin-node": "^7.0.1",
+    "eslint-plugin-promise": "^4.0.0",
+    "eslint-plugin-react": "^7.10.0",
+    "eslint-plugin-standard": "^3.1.0",
+    "gh-pages": "^1.2.0",
+    "react": "^16.4.1",
+    "react-dom": "^16.4.1",
+    "react-scripts": "^1.1.4",
+    "rollup": "^0.64.1",
+    "rollup-plugin-babel": "^3.0.7",
+    "rollup-plugin-commonjs": "^9.1.3",
+    "rollup-plugin-node-resolve": "^3.3.0",
+    "rollup-plugin-peer-deps-external": "^2.2.0",
+    "rollup-plugin-postcss": "^1.6.2",
+    "rollup-plugin-url": "^1.4.0"
   },
-  "auto": {
-    "plugins": [
-      "npm",
-      "released"
-    ]
-  }
+  "files": [
+    "dist"
+  ]
 }
