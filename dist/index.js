@@ -35,19 +35,17 @@ function styleInject(css, ref) {
   }
 }
 
-var css = "/* add css styles here (optional) */\n/* @import url(\"https://fonts.googleapis.com/css?family=Poppins&display=swap\"); */\n\n:root {\n  --color-primary: #008cba;\n  --color-secondary: #4caf50;\n  --color-solid: #fff;\n  --color-surface: #000;\n}\n\nbody {\n  font-family: sans-serif !important;\n  padding: 40px;\n  color: var(--color-surface);\n  background-color: var(--color-solid);\n}\n\ndiv {\n  margin: 10px;\n}\n\n.styles_banner__3FrG1 {\n  display: inline-block;\n  margin: 2em auto;\n  border: 2px solid #000;\n  font-size: 2em;\n}\n\n.styles_buttonBasic__2yy23 {\n  border: none;\n  color: white;\n  padding: 15px 32px;\n  text-align: center;\n  text-decoration: none;\n  display: inline-block;\n  font-size: 16px;\n}\n\n.styles_buttonPrimary__3Jpia {\n  background-color: var(--color-primary);\n}\n\n.styles_buttonSecondary__1OQ3B {\n  background-color: var(--color-secondary);\n}\n";
-var styles = { "banner": "styles_banner__3FrG1", "buttonBasic": "styles_buttonBasic__2yy23", "buttonPrimary": "styles_buttonPrimary__3Jpia", "buttonSecondary": "styles_buttonSecondary__1OQ3B" };
+var css = "/* add css styles here (optional) */\n/* @import url(\"https://fonts.googleapis.com/css?family=Poppins&display=swap\"); */\n\n:root {\n  --color-primary: #008cba;\n  --color-secondary: #4caf50;\n  --color-solid: #fff;\n  --color-surface: #000;\n}\n\nbody {\n  font-family: sans-serif !important;\n  padding: 40px;\n  color: var(--color-surface);\n  background-color: var(--color-solid);\n}\n\ndiv {\n  margin: 10px;\n}\n\n.styles_banner__3FrG1 {\n  display: inline-block;\n  margin: 2em auto;\n  border: 2px solid #000;\n  font-size: 2em;\n}\n\n.styles_buttonBasic__2yy23 {\n  color: white;\n  padding: 10px 28px;\n  text-align: center;\n  text-decoration: none;\n  display: inline-block;\n  font-size: 16px;\n  border-radius: 5px;\n  font-weight: 600;\n}\n\n.styles_buttonPrimary__3Jpia {\n  background-color: var(--color-primary);\n  border-width: 3px;\n  border-color: var(--color-primary);\n}\n\n.styles_buttonSecondary__1OQ3B {\n  background-color: var(--color-secondary);\n  border-width: 3px;\n  border-color: var(--color-secondary);\n}\n\n.styles_buttonOutline__1XI2z {\n  color: var(--color-primary);\n  padding: 10px 28px;\n  text-align: center;\n  display: inline-block;\n  font-size: 16px;\n  border-radius: 5px;\n  background-color: #fff;\n  font-weight: 600;\n}\n";
+var styles = { "banner": "styles_banner__3FrG1", "buttonBasic": "styles_buttonBasic__2yy23", "buttonPrimary": "styles_buttonPrimary__3Jpia", "buttonSecondary": "styles_buttonSecondary__1OQ3B", "buttonOutline": "styles_buttonOutline__1XI2z" };
 styleInject(css);
 
 function Button(_ref) {
   var title = _ref.title,
       onClick = _ref.onClick,
-      outline = _ref.outline,
-      primary = _ref.primary,
-      secondary = _ref.secondary;
+      type = _ref.type;
 
-  var primaryClass = secondary ? styles.buttonSecondary : styles.buttonPrimary;
-  var outlineClass = outline ? styles.buttonOutline : styles.buttonBasic;
+  var primaryClass = type === "secondary" ? styles.buttonSecondary : styles.buttonPrimary;
+  var outlineClass = type === "outline" ? styles.buttonOutline : styles.buttonBasic;
 
   return React__default.createElement(
     "button",
@@ -58,6 +56,7 @@ function Button(_ref) {
 
 Button.propTypes = {
   title: PropTypes.string,
+  type: PropTypes.string,
   onClick: PropTypes.func
 };
 

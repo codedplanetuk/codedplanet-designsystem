@@ -41,12 +41,19 @@ export default function App() {
       {renderComponent(
         "Primary",
         <Button
-          primary
+          type="primary"
           title="click me"
           onClick={() => onThemeClick(currentTheme, setTheme)}
         />
       )}
-      {renderComponent("Secondary", <Button secondary title="click me" />)}
+      {renderComponent(
+        "Secondary",
+        <Button type="secondary" title="click me" />
+      )}
+      {renderComponent("Secondary", <Button type="outline" title="click me" />)}
+      <pre>{'<Button type="primary" title="click me" />'}</pre>
+      <pre>{'<Button type="secondary" title="click me" />'}</pre>
+      <pre>{'<Button type="outline" title="click me" />'}</pre>
     </div>
   );
 }

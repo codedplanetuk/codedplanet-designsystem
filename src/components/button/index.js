@@ -3,11 +3,11 @@ import PropTypes from "prop-types";
 
 import styles from "../../styles.css";
 
-function Button({ title, onClick, outline, primary, secondary }) {
-  const primaryClass = secondary
-    ? styles.buttonSecondary
-    : styles.buttonPrimary;
-  const outlineClass = outline ? styles.buttonOutline : styles.buttonBasic;
+function Button({ title, onClick, type }) {
+  const primaryClass =
+    type === "secondary" ? styles.buttonSecondary : styles.buttonPrimary;
+  const outlineClass =
+    type === "outline" ? styles.buttonOutline : styles.buttonBasic;
 
   return (
     <button className={`${primaryClass} ${outlineClass}`} onClick={onClick}>
@@ -18,6 +18,7 @@ function Button({ title, onClick, outline, primary, secondary }) {
 
 Button.propTypes = {
   title: PropTypes.string,
+  type: PropTypes.string,
   onClick: PropTypes.func
 };
 
