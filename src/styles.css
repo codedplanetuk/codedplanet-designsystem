@@ -1,8 +1,22 @@
 /* add css styles here (optional) */
+/* @import url("https://fonts.googleapis.com/css?family=Poppins&display=swap"); */
 
 :root {
   --color-primary: #008cba;
   --color-secondary: #4caf50;
+  --color-solid: #fff;
+  --color-surface: #000;
+}
+
+body {
+  font-family: sans-serif !important;
+  padding: 40px;
+  color: var(--color-surface);
+  background-color: var(--color-solid);
+}
+
+div {
+  margin: 10px;
 }
 
 .banner {
