@@ -1,5 +1,7 @@
 'use strict';
 
+Object.defineProperty(exports, '__esModule', { value: true });
+
 function _interopDefault (ex) { return (ex && (typeof ex === 'object') && 'default' in ex) ? ex['default'] : ex; }
 
 var React = require('react');
@@ -33,9 +35,37 @@ function styleInject(css, ref) {
   }
 }
 
-var css = "/* add css styles here (optional) */\n\n.styles_test__32Qsm {\n  display: inline-block;\n  margin: 2em auto;\n  border: 2px solid #000;\n  font-size: 2em;\n}\n";
-var styles = { "test": "styles_test__32Qsm" };
+var css = "/* add css styles here (optional) */\n\n:root {\n  --color-primary: #008cba;\n  --color-secondary: #4caf50;\n}\n\n.styles_banner__3FrG1 {\n  display: inline-block;\n  margin: 2em auto;\n  border: 2px solid #000;\n  font-size: 2em;\n}\n\n.styles_buttonBasic__2yy23 {\n  border: none;\n  color: white;\n  padding: 15px 32px;\n  text-align: center;\n  text-decoration: none;\n  display: inline-block;\n  font-size: 16px;\n}\n\n.styles_buttonPrimary__3Jpia {\n  background-color: var(--color-primary);\n}\n\n.styles_buttonSecondary__1OQ3B {\n  background-color: var(--color-secondary);\n}\n";
+var styles = { "banner": "styles_banner__3FrG1", "buttonBasic": "styles_buttonBasic__2yy23", "buttonPrimary": "styles_buttonPrimary__3Jpia", "buttonSecondary": "styles_buttonSecondary__1OQ3B" };
 styleInject(css);
+
+function Button(_ref) {
+  var title = _ref.title,
+      onClick = _ref.onClick,
+      outline = _ref.outline,
+      primary = _ref.primary,
+      secondary = _ref.secondary;
+
+  var primaryClass = secondary ? styles.buttonSecondary : styles.buttonPrimary;
+  var outlineClass = outline ? styles.buttonOutline : styles.buttonBasic;
+
+  return React__default.createElement(
+    "button",
+    { className: primaryClass + " " + outlineClass, onClick: onClick },
+    title
+  );
+}
+
+Button.propTypes = {
+  title: PropTypes.string,
+  onClick: PropTypes.func
+};
+
+Button.defaultProps = {
+  onClick: function onClick() {
+    return console.log("Please implement the onClick");
+  }
+};
 
 var classCallCheck = function (instance, Constructor) {
   if (!(instance instanceof Constructor)) {
@@ -85,34 +115,33 @@ var possibleConstructorReturn = function (self, call) {
   return call && (typeof call === "object" || typeof call === "function") ? call : self;
 };
 
-var ExampleComponent = function (_Component) {
-  inherits(ExampleComponent, _Component);
+var Banner = function (_Component) {
+  inherits(Banner, _Component);
 
-  function ExampleComponent() {
-    classCallCheck(this, ExampleComponent);
-    return possibleConstructorReturn(this, (ExampleComponent.__proto__ || Object.getPrototypeOf(ExampleComponent)).apply(this, arguments));
+  function Banner() {
+    classCallCheck(this, Banner);
+    return possibleConstructorReturn(this, (Banner.__proto__ || Object.getPrototypeOf(Banner)).apply(this, arguments));
   }
 
-  createClass(ExampleComponent, [{
+  createClass(Banner, [{
     key: "render",
     value: function render() {
       var text = this.props.text;
 
-
       return React__default.createElement(
         "div",
-        { className: styles.test },
+        { className: styles.banner },
         "Banner: ",
         text
       );
     }
   }]);
-  return ExampleComponent;
+  return Banner;
 }(React.Component);
-
-ExampleComponent.propTypes = {
+Banner.propTypes = {
   text: PropTypes.string
 };
 
-module.exports = ExampleComponent;
+exports.Button = Button;
+exports.Banner = Banner;
 //# sourceMappingURL=index.js.map

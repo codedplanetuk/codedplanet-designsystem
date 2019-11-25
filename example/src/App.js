@@ -1,13 +1,21 @@
-import React, { Component } from 'react'
+import React, { Component } from "react";
 
-import ExampleComponent from 'codedplanet-designsystem'
+import { Banner, Button } from "codedplanet-designsystem";
 
-export default class App extends Component {
-  render () {
-    return (
-      <div>
-        <ExampleComponent text='Modern React component module' />
-      </div>
-    )
-  }
+function renderComponent(label, component) {
+  return (
+    <div>
+      <div>{label}: </div>
+      <div>{component}</div>
+    </div>
+  );
+}
+
+export default function App() {
+  return (
+    <div>
+      {renderComponent("Primary", <Button primary title="click me" />)}
+      {renderComponent("Secondary", <Button secondary title="click me" />)}
+    </div>
+  );
 }

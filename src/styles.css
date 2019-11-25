@@ -1,8 +1,31 @@
 /* add css styles here (optional) */
 
-.test {
+:root {
+  --color-primary: #008cba;
+  --color-secondary: #4caf50;
+}
+
+.banner {
   display: inline-block;
   margin: 2em auto;
   border: 2px solid #000;
   font-size: 2em;
+}
+
+.buttonBasic {
+  border: none;
+  color: white;
+  padding: 15px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+}
+
+.buttonPrimary {
+  background-color: var(--color-primary);
+}
+
+.buttonSecondary {
+  background-color: var(--color-secondary);
 }
