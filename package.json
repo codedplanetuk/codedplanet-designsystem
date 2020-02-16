@@ -14,6 +14,8 @@
   },
   "scripts": {
     "test": "cross-env CI=1 react-scripts test --env=jsdom",
+    "lint": "./node_modules/.bin/eslint --ext .jsx --ext .js src/",
+    "lintfix": "./node_modules/.bin/eslint --ext .jsx --ext .js src/ --fix",
     "test:watch": "react-scripts test --env=jsdom",
     "build": "rollup -c",
     "start": "rollup -c -w",
@@ -39,6 +41,7 @@
     "eslint-config-standard": "^11.0.0",
     "eslint-config-standard-react": "^6.0.0",
     "eslint-plugin-import": "^2.13.0",
+    "eslint-plugin-jsx-a11y": "^6.2.3",
     "eslint-plugin-node": "^7.0.1",
     "eslint-plugin-promise": "^4.0.0",
     "eslint-plugin-react": "^7.10.0",

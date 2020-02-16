@@ -1,16 +1,18 @@
-import React, { Component } from "react";
+import React from "react";
 import PropTypes from "prop-types";
-
-import styles from "../../styles.css";
+import "../../styles.css";
+import styles from "./button.css";
 
 function Button({ title, onClick, type }) {
   const primaryClass =
-    type === "secondary" ? styles.buttonSecondary : styles.buttonPrimary;
-  const outlineClass =
-    type === "outline" ? styles.buttonOutline : styles.buttonBasic;
+    type === "secondary" ? styles.btnSecondary : styles.btnPrimary;
+  const outlineClass = type === "outline" ? styles.btnOutline : "";
 
   return (
-    <button className={`${primaryClass} ${outlineClass}`} onClick={onClick}>
+    <button
+      className={`${styles.btn} ${primaryClass} ${outlineClass}`}
+      onClick={onClick}
+    >
       {title}
     </button>
   );
