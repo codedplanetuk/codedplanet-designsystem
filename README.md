@@ -13,15 +13,13 @@ npm install --save codedplanet-designsystem
 ## Usage
 
 ```jsx
-import React, { Component } from 'react'
+import React, { Component } from "react";
 
-import MyComponent from 'codedplanet-designsystem'
+import Button from "codedplanet-designsystem";
 
 class Example extends Component {
-  render () {
-    return (
-      <MyComponent />
-    )
+  render() {
+    return <Button type="primary" title="click me" />;
   }
 }
 ```
