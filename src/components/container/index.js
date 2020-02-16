@@ -11,7 +11,8 @@ function Container({ style, children }) {
 }
 
 Container.propTypes = {
-  style: PropTypes.object
+  style: PropTypes.object,
+  children: PropTypes.node
 };
 
 Container.defaultProps = {};

@@ -19,9 +19,9 @@ export default function App() {
   return (
     <Container style={styles.extraPadding}>
       <DSButton onThemeClick={() => onThemeClick(currentTheme, setTheme)} />
-      <Container>
-        <hr />
-      </Container>
+      <br />
+      <hr />
+      <br />
     </Container>
   );
 }

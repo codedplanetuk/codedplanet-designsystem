@@ -6,7 +6,9 @@
   --color-green: #4caf50;
   --color-secondary: #87868f;
   --color-solid: #fff;
-  --color-surface: #000;
+  --color-surface: #44444f;
+  --color-white: #fff;
+  --color-dark: #44444f;
 }
 
 body {

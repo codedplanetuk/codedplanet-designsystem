@@ -22,7 +22,7 @@
 
 .btnPrimary {
   /* make sure colors have enough contrast! */
-  color: var(--color-solid);
+  color: var(--color-white);
   background-color: var(--color-primary);
   border-color: var(--color-primary);
   border-width: 2px;
@@ -30,7 +30,7 @@
 
 .btnSecondary {
   /* make sure colors have enough contrast! */
-  color: var(--color-solid);
+  color: var(--color-white);
   background-color: var(--color-secondary);
   border-color: var(--color-secondary);
   border-width: 2px;
@@ -39,7 +39,7 @@
 .btnOutline {
   /* make sure colors have enough contrast! */
   color: var(--color-primary);
-  background-color: var(--color-solid);
+  background-color: var(--color-white);
   border-width: 2px;
   border-color: var(--color-primary);
 }
