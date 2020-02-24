@@ -1,6 +1,5 @@
 import React from "react";
 import PropTypes from "prop-types";
-import "../../styles.css";
 import styles from "./button.css";
 
 function Button({ title, onClick, type, style }) {

@@ -2,12 +2,12 @@ import React from "react";
 import { Button, Container } from "codedplanet-designsystem";
 import { applyTheme } from "./theme";
 import DSButton from "./components/DSButton";
+import DSCard from "./components/DSCard";
 import DSPlayground from "./components/DSPlayground";
 
 const styles = {
   extraPadding: { padding: 20 },
-  zeroPadding: { padding: 0 },
-  alignRight: { textAlign: "right" },
+  btnContainer: { textAlign: "right", padding: 10 },
   hr: { marginTop: 20, marginBottom: 20 }
 };
 
@@ -28,14 +28,18 @@ export default function App() {
   const nextTheme = state.theme === "light" ? "dark" : "light";
 
   return (
-    <Container style={styles.zeroPadding}>
+    <Container>
       {showPG && <DSPlayground />}
-      <Container style={styles.alignRight}>
+      <Container style={styles.btnContainer}>
         <Button
           type="primary"
           title={nextTheme}
           onClick={() => onThemeClick(nextTheme, state, setState)}
         />
+      </Container>
+      <Container style={styles.extraPadding}>
+        <DSCard />
+        <Break />
       </Container>
       <Container style={styles.extraPadding}>
         <DSButton />

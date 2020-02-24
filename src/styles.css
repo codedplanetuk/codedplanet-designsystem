@@ -41,5 +41,13 @@ button {
 } */
 
 .container {
-  padding: 10px;
+  padding: 0px;
+}
+
+.flexParent {
+  display: flex;
+}
+
+.flexGrower {
+  flex-grow: 1;
 }

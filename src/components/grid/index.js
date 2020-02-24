@@ -2,19 +2,19 @@ import React from "react";
 import PropTypes from "prop-types";
 import GlobalStyles from "../../styles.css";
 
-function Container({ style, children }) {
+function Grid({ style, children }) {
   return (
-    <div className={GlobalStyles.container} style={style}>
+    <div className={GlobalStyles.flexParent} style={style}>
       {children}
     </div>
   );
 }
 
-Container.propTypes = {
+Grid.propTypes = {
   style: PropTypes.object,
   children: PropTypes.node
 };
 
-Container.defaultProps = {};
+Grid.defaultProps = {};
 
-export { Container };
+export { Grid };

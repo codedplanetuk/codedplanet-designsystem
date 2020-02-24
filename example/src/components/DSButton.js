@@ -1,6 +1,14 @@
 import React from "react";
 import { Button, Container } from "codedplanet-designsystem";
 import ComponentContainer from "./ComponentContainer";
+import SyntaxHighlighter from "react-syntax-highlighter";
+import { docco } from "react-syntax-highlighter/dist/esm/styles/hljs";
+
+const CodeBlock = ({ codeString }) => (
+  <SyntaxHighlighter language="javascript" style={docco}>
+    {codeString}
+  </SyntaxHighlighter>
+);
 
 const styles = {
   zeroPadding: { padding: 0 }
@@ -21,9 +29,11 @@ export default function DSButton({ onThemeClick }) {
       </ComponentContainer>
       <h1>Code examples</h1>
       <ComponentContainer>
-        <pre>{'<Button type="primary" title="click me" />'}</pre>
-        <pre>{'<Button type="secondary" title="click me" />'}</pre>
-        <pre>{'<Button type="outline" title="click me" />'}</pre>
+        <CodeBlock codeString={'<Button type="primary" title="click me" />'} />
+        <CodeBlock
+          codeString={'<Button type="secondary" title="click me" />'}
+        />
+        <CodeBlock codeString={'<Button type="outline" title="click me" />'} />
       </ComponentContainer>
     </Container>
   );
