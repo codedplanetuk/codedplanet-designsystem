@@ -64,7 +64,7 @@
   ],
   "husky": {
     "hooks": {
-      "pre-commit": "yarn prepareall"
+      "pre-commit": ""
     }
   }
 }

@@ -50,7 +50,7 @@ export default function DSCard() {
           </Card>
         </Container>
       </ComponentContainer>
-      <ComponentContainer label="Card example in grid">
+      <ComponentContainer label="Card grid example">
         {grid()}
       </ComponentContainer>
       <h1>Code examples</h1>
