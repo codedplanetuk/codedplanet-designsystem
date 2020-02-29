@@ -17,9 +17,10 @@ jobs:
         uses: actions/setup-node@v1
         with:
           node-version: ${{ matrix.node-version }}
+      - run: echo '*** Build design system and example for gh-pages ***'
       - run: yarn && yarn build
       - run: cd example && yarn && yarn build
-      - run: echo 'Husky ensures files are built just run tests'
+      - run: echo '*** Deploy static files to gh-pages branch ***'
         env:
           CI: true
 
