@@ -21,7 +21,8 @@
     "start": "rollup -c -w",
     "prepare": "yarn run build",
     "predeploy": "cd example && yarn install && yarn run build",
-    "deploy": "gh-pages -d example/build"
+    "deploy": "gh-pages -d example/build",
+    "prepareall": "yarn build && cd example && yarn build"
   },
   "peerDependencies": {
     "prop-types": "^15.5.4",
@@ -60,5 +61,10 @@
   },
   "files": [
     "dist"
-  ]
+  ],
+  "husky": {
+    "hooks": {
+      "pre-commit": "yarn prepareall"
+    }
+  }
 }
