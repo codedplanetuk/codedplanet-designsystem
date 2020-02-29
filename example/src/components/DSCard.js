@@ -1,5 +1,5 @@
 import React from "react";
-import { Card, Container } from "codedplanet-designsystem";
+import { Card, Container, Grid } from "codedplanet-designsystem";
 import ComponentContainer from "./ComponentContainer";
 import SyntaxHighlighter from "react-syntax-highlighter";
 import { docco } from "react-syntax-highlighter/dist/esm/styles/hljs";
@@ -12,12 +12,27 @@ const CodeBlock = ({ codeString }) => (
 
 const styles = {
   zeroPadding: { padding: 0 },
-  fixedCard: { width: 400 }
+  fixedCard: { width: 400 },
+  childDiv: { margin: 10, width: 400 }
 };
 
-export default function DSCard() {
-  const header = { title: "My header", options: null };
+const header = { title: "My header", options: null };
 
+const card = style => (
+  <Card header={header} style={style}>
+    <div>Child content</div>
+  </Card>
+);
+
+const grid = () => (
+  <Grid>
+    {[1, 2, 3].map(n => (
+      <div>{card(styles.childDiv)}</div>
+    ))}
+  </Grid>
+);
+
+export default function DSCard() {
   return (
     <Container style={styles.zeroPadding}>
       <h1>Card</h1>
@@ -35,6 +50,7 @@ export default function DSCard() {
           </Card>
         </Container>
       </ComponentContainer>
+      <ComponentContainer label="Grid example">{grid()}</ComponentContainer>
       <h1>Code examples</h1>
       <ComponentContainer>
         <CodeBlock
